@@ -16,7 +16,7 @@ namespace UI2
             Console.WriteLine(configurationFile.UI2Int);
             Console.WriteLine(configurationFile.UI2Uri);
 
-            var widget = new Widget(Injector.Instance.Resolve<ICoreConfiguration>());
+            var widget = Injector.Instance.Resolve<IWidget>();
             widget.DoSomething();
 
             Console.ReadLine();

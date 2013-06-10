@@ -16,7 +16,7 @@ namespace UI1
             Console.WriteLine(configurationFile.UI1Int);
             Console.WriteLine(configurationFile.UI1Uri);
 
-            var widget = new Widget(Injector.Instance.Resolve<ICoreConfiguration>());
+            var widget = Injector.Instance.Resolve<IWidget>();
             widget.DoSomething();
 
             Console.ReadLine();

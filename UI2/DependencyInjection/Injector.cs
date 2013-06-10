@@ -3,6 +3,7 @@ using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using UI2.Configuration;
+using API;
 
 namespace UI2.DependencyInjection
 {
@@ -31,6 +32,7 @@ namespace UI2.DependencyInjection
 
             RegisterInjector(container);
             RegisterConfiguration(container);
+            RegisterWidget(container);
 
             return container;
         }
@@ -47,6 +49,14 @@ namespace UI2.DependencyInjection
             container.Register(
                 Component.For<IConfigurationFile, ICoreConfiguration>()
                 .ImplementedBy(typeof(Configuration.ConfigurationFile))
+                .LifeStyle.Singleton);
+        }
+
+        private static void RegisterWidget(WindsorContainer container)
+        {
+            container.Register(
+                Component.For<IWidget>()
+                .ImplementedBy(typeof(Widget))
                 .LifeStyle.Singleton);
         }
     }

@@ -4,20 +4,15 @@ namespace API
 {
     using System;
 
-    public class Widget
+    public class Widget : IWidget
     {
-        private readonly ICoreConfiguration configuration;
-
-        public Widget(ICoreConfiguration configuration)
-        {
-            this.configuration = configuration;    
-        }
+        public ICoreConfiguration Configuration { get; set; }
 
         public void DoSomething()
         {
-            Console.WriteLine(configuration.CoreString);
-            Console.WriteLine(configuration.CoreInt);
-            Console.WriteLine(configuration.CoreUri);
+            Console.WriteLine(Configuration.CoreString);
+            Console.WriteLine(Configuration.CoreInt);
+            Console.WriteLine(Configuration.CoreUri);
         }
     }
 }
