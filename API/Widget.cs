@@ -1,9 +1,8 @@
-﻿using API.Configuration;
+﻿using System;
+using API.Configuration;
 
 namespace API
 {
-    using System;
-
     public class Widget : IWidget
     {
         public ICoreConfiguration Configuration { get; set; }
