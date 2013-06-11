@@ -2,7 +2,6 @@
 using UI1.Configuration;
 using API;
 using UI1.DependencyInjection;
-using API.Configuration;
 
 namespace UI1
 {

@@ -2,7 +2,6 @@
 using UI2.Configuration;
 using API;
 using UI2.DependencyInjection;
-using API.Configuration;
 
 namespace UI2
 {
